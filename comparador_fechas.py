@@ -38,3 +38,9 @@ else:
                 print("La segunda fecha es mayor")
             else:
                 print("Las fechas son iguales")
+    if y1 == y2 and m1 == m2:
+        print("Están en el mismo mes y año")
+    else:
+        print("No están en el mismo mes y año")
+    days = abs((y1 - y2) * 365 + (m1 - m2) * 30 + (d1 - d2))
+    print(f"Días de diferencia: {days}")

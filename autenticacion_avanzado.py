@@ -10,5 +10,14 @@ while trys > 0 and not successful_entry:
     print(f"Te quedan: {trys} intentos")
     tryuser = input("Ingrese su usuario: ")
     trypass = input("Ingrese su contraseña: ")
-    if tryuser in user1 or user2 or user3:
+    if (tryuser == user1 and trypass == password1) or (tryuser == user2 and trypass == password2) or (tryuser == user3 and trypass == password3):
         successful_entry = True
+    else:
+        print("Las credenciales son incorrectas.")
+        trys -= 1
+if not successful_entry:
+    print("Acceso bloqueado.")
+else:
+    print("1. Ver perfil")
+    print("2. Cambiar contraseña")
+    print("3. Cerrar sesión")
